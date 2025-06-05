@@ -1,0 +1,19 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "CreditMaestro",
+    "name_for_model": "creditmaestro",
+    "description_for_human": "Analyze and recommend on your spending data",
+    "description_for_model": "Plugin for fetching and analyzing financial transactions via Plaid sandbox.",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "http://localhost:5000/.well-known/openapi.yaml",
+      "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:5000/.well-known/logo.png",
+    "contact_email": "you@example.com",
+    "legal_info_url": "http://example.com/legal"
+  }
+  

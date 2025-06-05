@@ -1,0 +1,45 @@
+{
+    "servers": [
+      {
+        "id": "plaid",
+        "url": "http://localhost:5000",
+        "openapi": {
+          "paths": {
+            "/getTransactions": {
+              "post": {
+                "operationId": "getTransactions",
+                "requestBody": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "startDate": { "type": "string", "format": "date" },
+                          "endDate":   { "type": "string", "format": "date" }
+                        },
+                        "required": ["startDate","endDate"]
+                      }
+                    }
+                  }
+                },
+                "responses": {
+                  "200": {
+                    "description": "List of transactions",
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "type": "array",
+                          "items": { "type": "object" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+  
